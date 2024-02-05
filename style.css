@@ -90,5 +90,84 @@ nav > .header_auth{
   transition: 0.3s;
 }
 
-
 /* ==================== END HEADER ==================== */
+
+/* ==================== MAIN ==================== */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.hero{
+  width: 1140px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin: 5em auto;
+}
+
+.hero > img{
+  max-width: 100%;
+  height: auto;
+}
+
+.hero > .hero_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+}
+
+.hero_content > h1{
+  letter-spacing: 3px;
+  font-size: 3.5em;
+  font-weight: bolder;
+  color: #3F72AF;
+}
+
+.hero_content > article {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.hero_cta{
+  background-color: #3F72AF;
+  color: white;
+  padding: 1em;
+  border-radius: 3px;
+  border: none;
+  font-size: 1.4em;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.hero_cta:hover{
+  background-color: #1A5276;
+  transition: 0.3s;
+}
+
+.promotion{
+  text-align: center;
+  background-color: white;
+  padding: 6em 0;
+}
+
+.promotion > h2{
+  margin-bottom: 2em;
+}
+
+.promotion-company {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  width: 1140px;
+}
+
+.promotion-company > img{
+  width: 10em;
+  height: auto;
+}
