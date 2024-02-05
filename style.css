@@ -224,3 +224,37 @@ main {
   background-color: #1A5276;
   transition: 0.3s;
 }
+
+.testimoni{
+  text-align: center;
+  padding: 5em 0;
+}
+
+.testimoni > h2{
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.testimoni > .testimoni-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin: 0 auto;
+  width: 1140px;
+}
+
+.testimoni-card{
+  border: 2px solid #3F72AF;
+  border-radius: 5px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2em;
+  align-items: center;
+}
+
+.testimoni-card > img {
+  width: 50%;
+  height: auto;
+}
