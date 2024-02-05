@@ -18,6 +18,9 @@ header{
   padding: 1em 5em;
   background-color: white;
   border-bottom: 1px solid #E0E0E0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header_logo{
@@ -99,6 +102,7 @@ main {
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
+  margin-top: 5em;
 }
 
 .hero{
@@ -309,6 +313,7 @@ main {
 }
 
 .next-journey{
+  background-color: white;
   text-align: center;
   padding: 5em 0;
 }
@@ -328,4 +333,13 @@ main {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.2em;
+}
+
+/* ==================== END MAIN ==================== */
+
+/* ==================== FOOTER ==================== */
+footer{
+  text-align: center;
+  padding: 2em 0;
+  background-color: #F9F7F7;
 }
