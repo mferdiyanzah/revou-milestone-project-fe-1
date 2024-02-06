@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME | SINAU</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header_logo">SINAU</div>
+
+      <nav>
+        <ul>
+          <li class="header_explore">Eksplor</li>
+          <li>
+            <input
+              type="text"
+              name="search"
+              id="search-nav"
+              placeholder="Apa yang ingin anda cari?"
+            />
+          </li>
+        </ul>
+
+        <ul class="header_auth">
+          <li><a href="#">Masuk</a></li>
+          <li class="register">Daftar Gratis</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-explore">
+      <section class="top-filter">
+        <button class="filter-button" onclick="onHideFilterTab()">Filter</button>
+        <div class="sort">
+          <label for="sort">Urutkan</label>
+          <select name="sort" id="sort">
+            <option value="direkomendasikan">Direkomendasikan</option>
+            <option value="terbaru">Terbaru</option>
+            <option value="terpopuler">Terpopuler</option>
+            <option value="terlama">Terlama</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="program-content">
+        <aside id="filter-tab">
+          <div class="ratings-filter">
+            <div class="filter-type-header" onclick="onHideFilterType('rating-container', 'rating-arrow')">
+              <h3>Rating</h3>
+              <div id="rating-arrow" class="filter-arrow">^</div>
+            </div>
+            
+            <div class="rating-container" id="rating-container">
+              <div class="rating">
+                <input type="radio" name="rating" id="rating-5" />
+                <label for="rating-5">
+                  <span class="star-fill"
+                    >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+                  >
+                  5
+                </label>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating" id="rating-4" />
+                <label for="rating-4">
+                  <span class="star-fill"
+                    >&#9733;&#9733;&#9733;&#9733;&#9734;</span
+                  >
+                  Lebih dari 4</label
+                >
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating" id="rating-3" />
+                <label for="rating-3"
+                  ><span class="star-fill"
+                    >&#9733;&#9733;&#9733;&#9734;&#9734;</span
+                  >
+                  Lebih dari 3</label
+                >
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating" id="rating-2" />
+                <label for="rating-2"
+                  ><span class="star-fill"
+                    >&#9733;&#9733;&#9734;&#9734;&#9734;</span
+                  >
+                  Lebih dari 2</label
+                >
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating" id="rating-1" />
+                <label for="rating-1"
+                  ><span class="star-fill"
+                    >&#9733;&#9734;&#9734;&#9734;&#9734;</span
+                  >
+                  Lebih dari 1</label
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <div class="topics-filter">
+            <div class="filter-type-header" onclick="onHideFilterType('topic-container', 'topic-arrow')">
+              <h3>Topik</h3>
+              <div id="topic-arrow" class="filter-arrow">^</div>
+            </div>
+            <div class="topic-container" id="topic-container">
+              <div class="topic">
+                <input type="checkbox" name="topic" id="topic-1" />
+                <label for="topic-1">Teknologi</label>
+              </div>
+              <div class="topic">
+                <input type="checkbox" name="topic" id="topic-2" />
+                <label for="topic-2">Bisnis</label>
+              </div>
+              <div class="topic">
+                <input type="checkbox" name="topic" id="topic-3" />
+                <label for="topic-3">Pemasaran</label>
+              </div>
+              <div class="topic">
+                <input type="checkbox" name="topic" id="topic-4" />
+                <label for="topic-4">Desain</label>
+              </div>
+              <div class="topic">
+                <input type="checkbox" name="topic" id="topic-5" />
+                <label for="topic-5">Pemrograman</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="level-filter">
+            <div class="filter-type-header" onclick="onHideFilterType('level-container', 'level-arrow')">
+              <h3>Level</h3>
+              <div id="level-arrow" class="filter-arrow">^</div>
+            </div>
+            <div class="level-container" id="level-container">
+              <div class="level">
+                <input type="checkbox" name="level" id="level-1" />
+                <label for="level-1">Pemula</label>
+              </div>
+              <div class="level">
+                <input type="checkbox" name="level" id="level-2" />
+                <label for="level-2">Menengah</label>
+              </div>
+              <div class="level">
+                <input type="checkbox" name="level" id="level-3" />
+                <label for="level-3">Lanjutan</label>
+              </div>
+            </div>
+        </aside>
+
+        <div class="program-list" id="program-list">
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=1" alt="program" />
+            <div class="program-info">
+              <h3>Kubernetes untuk Anak PAUD</h3>
+              <p>Pertimbangkan Kubernetes sebagai 'pembantu ajaib' yang membantu robot-robot kecil untuk bekerja bersama-sama. Setiap robot punya tugasnya sendiri, seperti menyimpan mainan, membersihkan ruangan, atau menyanyikan lagu.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (2999)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 100.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=2" alt="program" />
+            <div class="program-info">
+              <h3>Quantum Computing</h3>
+              <p>Dalam program belajar Quantum Computing kami, kamu akan memasuki dunia ajaib di mana komputer tidak lagi mengikuti aturan konvensional. Bersiaplah untuk memahami konsep-konsep misterius seperti qubits, superposisi, dan entanglement dengan cara yang menyenangkan dan interaktif.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.7 (96)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 190.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=3" alt="program" />
+            <div class="program-info">
+              <h3>Bisnis Ternak Lele</h3>
+              <p>Tak perlu khawatir jika kamu belum memiliki pengalaman! Kursus ini dirancang untuk semua orang, dari pemula hingga yang ingin meningkatkan keahlian mereka dalam bisnis ternak lele.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.4 (9697)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 790.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=4" alt="program" />
+            <div class="program-info">
+              <h3>Rust for Dummy</h3>
+              <p>Ingin memahami pemrograman dengan cara yang menyenangkan dan tidak rumit? Bergabunglah dengan kursus kami yang dirancang khusus untuk pemula yang ingin memasuki dunia programming menggunakan Rust.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (6)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 999.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=1" alt="program" />
+            <div class="program-info">
+              <h3>Kubernetes untuk Anak PAUD</h3>
+              <p>Pertimbangkan Kubernetes sebagai 'pembantu ajaib' yang membantu robot-robot kecil untuk bekerja bersama-sama. Setiap robot punya tugasnya sendiri, seperti menyimpan mainan, membersihkan ruangan, atau menyanyikan lagu.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (2999)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 100.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=2" alt="program" />
+            <div class="program-info">
+              <h3>Quantum Computing</h3>
+              <p>Dalam program belajar Quantum Computing kami, kamu akan memasuki dunia ajaib di mana komputer tidak lagi mengikuti aturan konvensional. Bersiaplah untuk memahami konsep-konsep misterius seperti qubits, superposisi, dan entanglement dengan cara yang menyenangkan dan interaktif.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.7 (96)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 190.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=3" alt="program" />
+            <div class="program-info">
+              <h3>Bisnis Ternak Lele</h3>
+              <p>Tak perlu khawatir jika kamu belum memiliki pengalaman! Kursus ini dirancang untuk semua orang, dari pemula hingga yang ingin meningkatkan keahlian mereka dalam bisnis ternak lele.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.4 (9697)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 790.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=4" alt="program" />
+            <div class="program-info">
+              <h3>Rust for Dummy</h3>
+              <p>Ingin memahami pemrograman dengan cara yang menyenangkan dan tidak rumit? Bergabunglah dengan kursus kami yang dirancang khusus untuk pemula yang ingin memasuki dunia programming menggunakan Rust.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (6)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 999.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=1" alt="program" />
+            <div class="program-info">
+              <h3>Kubernetes untuk Anak PAUD</h3>
+              <p>Pertimbangkan Kubernetes sebagai 'pembantu ajaib' yang membantu robot-robot kecil untuk bekerja bersama-sama. Setiap robot punya tugasnya sendiri, seperti menyimpan mainan, membersihkan ruangan, atau menyanyikan lagu.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (2999)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 100.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=2" alt="program" />
+            <div class="program-info">
+              <h3>Quantum Computing</h3>
+              <p>Dalam program belajar Quantum Computing kami, kamu akan memasuki dunia ajaib di mana komputer tidak lagi mengikuti aturan konvensional. Bersiaplah untuk memahami konsep-konsep misterius seperti qubits, superposisi, dan entanglement dengan cara yang menyenangkan dan interaktif.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.7 (96)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 190.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=3" alt="program" />
+            <div class="program-info">
+              <h3>Bisnis Ternak Lele</h3>
+              <p>Tak perlu khawatir jika kamu belum memiliki pengalaman! Kursus ini dirancang untuk semua orang, dari pemula hingga yang ingin meningkatkan keahlian mereka dalam bisnis ternak lele.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.4 (9697)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 790.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=4" alt="program" />
+            <div class="program-info">
+              <h3>Rust for Dummy</h3>
+              <p>Ingin memahami pemrograman dengan cara yang menyenangkan dan tidak rumit? Bergabunglah dengan kursus kami yang dirancang khusus untuk pemula yang ingin memasuki dunia programming menggunakan Rust.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (6)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 999.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=1" alt="program" />
+            <div class="program-info">
+              <h3>Kubernetes untuk Anak PAUD</h3>
+              <p>Pertimbangkan Kubernetes sebagai 'pembantu ajaib' yang membantu robot-robot kecil untuk bekerja bersama-sama. Setiap robot punya tugasnya sendiri, seperti menyimpan mainan, membersihkan ruangan, atau menyanyikan lagu.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (2999)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 100.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=2" alt="program" />
+            <div class="program-info">
+              <h3>Quantum Computing</h3>
+              <p>Dalam program belajar Quantum Computing kami, kamu akan memasuki dunia ajaib di mana komputer tidak lagi mengikuti aturan konvensional. Bersiaplah untuk memahami konsep-konsep misterius seperti qubits, superposisi, dan entanglement dengan cara yang menyenangkan dan interaktif.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.7 (96)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 190.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=3" alt="program" />
+            <div class="program-info">
+              <h3>Bisnis Ternak Lele</h3>
+              <p>Tak perlu khawatir jika kamu belum memiliki pengalaman! Kursus ini dirancang untuk semua orang, dari pemula hingga yang ingin meningkatkan keahlian mereka dalam bisnis ternak lele.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.4 (9697)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 790.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program">
+            <img src="https://picsum.photos/200/200?random=4" alt="program" />
+            <div class="program-info">
+              <h3>Rust for Dummy</h3>
+              <p>Ingin memahami pemrograman dengan cara yang menyenangkan dan tidak rumit? Bergabunglah dengan kursus kami yang dirancang khusus untuk pemula yang ingin memasuki dunia programming menggunakan Rust.</p>
+              <div class="program-rating">
+                <span class="star-fill">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 (6)</span>
+              </div>
+              <div class="program-price">
+                <span>Rp. 999.000</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      SINAU @ 2024
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
