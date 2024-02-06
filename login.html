@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN | SINAU</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="login-container">
+      <section class="login">
+        <h1>Masuk ke SINAU</h1>
+        <p>Belum punya akun? <a href="#">Daftar Sekarang</a></p>
+        <form action="" id="login-form">
+          <input type="email" name="email" id="email" placeholder="Email" oninput="checkLoginForm()" required />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Kata Sandi"
+            required
+            oninput="checkLoginForm()"
+          />
+          <button type="submit" id="login-btn">Masuk</button>
+        </form>
+        
+        <p>Atau masuk dengan</p>
+        <div class="social-media">
+          <a href="#"><img src="images/icon/icon-fb.png" alt="fb" /></a>
+          <a href="#"><img src="images/icon/icon-google.png" alt="Google" /></a>
+          <a href="#"><img src="images/icon/icon-apple.png" alt="Apple" /></a>
+        </div>
+      </section>
+    </section>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
