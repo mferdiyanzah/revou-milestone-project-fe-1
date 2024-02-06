@@ -8,9 +8,12 @@
   </head>
   <body>
     <header>
-      <div class="header_logo">SINAU</div>
-
-      <nav>
+      <div class="main-header">
+        <div class="header_logo">SINAU</div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+      </div>
+      
+      <nav id="navbar" class="navbar">
         <ul>
           <li class="header_explore">Eksplor</li>
           <li>
@@ -19,6 +22,7 @@
               name="search"
               id="search-nav"
               placeholder="Apa yang ingin anda cari?"
+              class="search-nav"
             />
           </li>
         </ul>
@@ -194,6 +198,6 @@
       SINAU @ 2024
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

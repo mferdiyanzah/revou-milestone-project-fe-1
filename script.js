@@ -1,3 +1,32 @@
+// NAVBAR
+const navbarToggle = document.getElementById("navbar-toggle");
+
+const onToggleNavbar = () => {
+  const navbar = document.getElementById("navbar");
+  const currentDisplay = navbar.style.display;
+  const isNavbarVisible = currentDisplay === "none" || currentDisplay === "";
+
+  navbar.style.display = isNavbarVisible ? "flex" : "none";
+  
+  navbarToggle.innerHTML = isNavbarVisible ? "&#10005;" : "&#9776;";
+};
+
+
+navbarToggle.addEventListener("click", onToggleNavbar);
+
+const onResizeWindow = () => {
+  const navbar = document.getElementById("navbar");
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth > 980) {
+    navbar.style.display = "flex";
+  } else {
+    navbar.style.display = "none";
+  }
+}
+
+window.addEventListener("resize", onResizeWindow);
+
 const onHideFilterTab = () => {
   const filterTab = document.getElementById("filter-tab");
   const currentDisplay = filterTab.style.width;
