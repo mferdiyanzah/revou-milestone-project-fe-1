@@ -7,10 +7,9 @@ const onToggleNavbar = () => {
   const isNavbarVisible = currentDisplay === "none" || currentDisplay === "";
 
   navbar.style.display = isNavbarVisible ? "flex" : "none";
-  
+
   navbarToggle.innerHTML = isNavbarVisible ? "&#10005;" : "&#9776;";
 };
-
 
 navbarToggle.addEventListener("click", onToggleNavbar);
 
@@ -23,7 +22,7 @@ const onResizeWindow = () => {
   } else {
     navbar.style.display = "none";
   }
-}
+};
 
 window.addEventListener("resize", onResizeWindow);
 
@@ -49,6 +48,37 @@ const onHideFilterType = (filterType, idArrow) => {
       ? "rotate(0deg)"
       : "rotate(180deg)";
 };
+
+const onHideSidebar = () => {
+  const sidebar = document.getElementById("sidebar-hamburger");
+  sidebar.classList.toggle("active");
+
+  const sidebarHeader = document.getElementById("sidebar-header");
+  sidebarHeader.classList.toggle("hidden");
+
+  const sidebarContent = document.getElementById("sidebar-content");
+  sidebarContent.classList.toggle("hidden");
+
+  const learningSidebar = document.getElementById("learning-sidebar");
+  learningSidebar.classList.toggle("hidden");
+
+  const learningContent = document.getElementById("learning-content");
+  learningContent.classList.toggle("larger");
+}
+
+const contentType = ['video-content', 'pdf-content', 'article-content']
+
+const onChangeContent = (type) => {
+  contentType.forEach(content => {
+    const contentElement = document.getElementById(content);
+    contentElement.style.display = contentType[type] === content ? 'block' : 'none';
+
+    if (content === 'video-content') {
+      const videoElement = document.getElementById('video-content');
+      videoElement.pause();
+    }
+  })
+}
 
 // LOGIN FORM
 const emailInput = document.getElementById("email");
@@ -82,3 +112,5 @@ const onSubmitLoginForm = (e) => {
 
 const formElement = document.getElementById("login-form");
 formElement.addEventListener("submit", onSubmitLoginForm);
+
+// LEARNING PAGE

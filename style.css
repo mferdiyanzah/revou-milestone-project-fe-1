@@ -21,6 +21,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  min-height: 5em;
 }
 
 .header_logo {
@@ -39,10 +40,11 @@ header {
 
 li > a {
   text-decoration: none;
+  color: #3f72af;
 }
 
 li > a:hover {
-  color: #3f72af;
+  color: #1a5276;
   transition: 0.3s;
 }
 
@@ -238,7 +240,6 @@ main.homepage {
   margin: 0 auto;
   gap: 2em;
   padding: 1em;
-  place-content: center center;
 }
 
 .promotion-company > img {
@@ -302,7 +303,7 @@ main.homepage {
 
 .testimoni {
   text-align: center;
-  padding: 5em 0;
+  padding: 6em;
 }
 
 .testimoni > h2 {
@@ -312,10 +313,11 @@ main.homepage {
 
 .testimoni > .testimoni-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
   margin: 0 auto;
-  width: 1140px;
+  width: 100%;
+  max-width: 1140px;
 }
 
 .testimoni-card {
@@ -348,10 +350,11 @@ main.homepage {
 
 .news-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
   margin: 0 auto;
-  width: 1140px;
+  width: 100%;
+  max-width: 1140px;
 }
 
 .news-card {
@@ -483,9 +486,7 @@ footer {
   transition: all 1s ease;
 }
 
-.ratings-filter,
-.topics-filter,
-.level-filter {
+.main-topic {
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -493,25 +494,19 @@ footer {
   border-bottom: 2px solid #e0e0e0;
 }
 
-.filter-type-header {
+.main-topic-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
 
-.rating-container,
-.topic-container,
-.level-container {
+.topic-container {
   display: flex;
-  gap: 0.5em;
+  gap: 1em;
   flex-direction: column;
   padding-left: 1em;
-}
-
-.topic {
-  display: flex;
-  gap: 0.5em;
+  list-style-type: none;
 }
 
 .rating > label {
@@ -524,32 +519,106 @@ footer {
 
 .filter-arrow {
   transition: 0.3s;
-  font-size: 1.2em;
-  font-weight: 700;
-  font-stretch: ultra-expanded;
 }
 
-.program-list{
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  width: 70%;
+.filter-arrow > img {
+  width: 1.5em;
+  height: auto;
 }
 
-.program {
+.topic-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2.5em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topic-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #eee;
+}
+
+.topic-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.topic-checkbox input:checked ~ .checkmark {
+  background-color: #3f72af;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.topic-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.topic-checkbox .checkmark:after {
+  top: 0.1em;
+  left: 0.45em;
+  width: 0.4em;
+  height: 0.8em;
+  border: solid white;
+  border-width: 0 0.2em 0.2em 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.topic-title{
+  margin-left: 2em;
+  cursor: pointer;
+}
+
+.sidebar-header.hidden, .main-topic-list.hidden{
+  display: none;
+}
+
+.sidebar-header{
   display: flex;
-  gap: 1em;
-  border-bottom: 2px solid #e0e0e0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px double #3f72af;
   padding-bottom: 1em;
 }
 
-.program-info{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.5em;
+.sidebar-header > .close-sidebar{
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
 }
+
+.sidebar-hamburger{
+  font-size: 1.6em;
+  font-weight: 900;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar-hamburger.active{
+  display: block;
+}
+
+
 
 /* ==================== END EXPLORE PAGE ==================== */
 
@@ -622,6 +691,54 @@ footer {
   border-radius: 50%;
 }
 
+/* ==================== END LOGIN ==================== */
+
+/* ==================== LEARNING ==================== */
+main.learning-container {
+  width: 100%;
+  display: flex;
+  margin-top: 5em;
+}
+
+.learning-content-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.learning-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.learning-content > * {
+  margin: 0 auto;
+}
+
+.learning-sidebar {
+  border-left: 1px solid #e0e0e0;
+  width: 25%;
+  padding: 1em;
+  background-color: #f9f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.learning-content-container.larger{
+  width: 97%;
+}
+
+.learning-sidebar.hidden{
+  width: 3%;
+}
+
+.pdf-content, .article-content{
+  display: none;
+}
+
 @media (max-width: 1200px) {
   main.homepage {
     margin-top: 2em;
@@ -657,7 +774,7 @@ footer {
     font-size: 1em;
   }
 
-  .promotion, .explore_programs{
+  .promotion, .explore_programs, .testimoni{
     padding: 2em;
   }
 
