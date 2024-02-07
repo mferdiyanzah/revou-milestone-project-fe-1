@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Rust Untuk ANAK PAUD | SINAU</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
@@ -36,7 +36,7 @@
     </header>
 
     <main class="learning-container">
-      <section class="learning-content" id="learning-content">
+      <div class="learning-content" id="learning-content">
         <video
           id="video-content"
           src="/videos/rust.mp4"
@@ -51,8 +51,6 @@
           type="application/pdf"
           class="pdf-content"
           aria-describedby="pdf-description"
-          width="100%"
-          height="700px"
         />
 
         <iframe
@@ -60,10 +58,9 @@
           src="https://en.wikipedia.org/wiki/Rust_(programming_language)"
           class="article-content"
           aria-describedby="article-description"
-          width="100%"
-          height="700px"
+          title="Rust Programming Language"
         ></iframe>
-      </section>
+      </div>
 
       <aside class="learning-sidebar" id="learning-sidebar">
         <section class="sidebar-header" id="sidebar-header">
@@ -71,25 +68,25 @@
           <div
             class="close-sidebar"
             id="close-sidebar"
-            onclick="onHideSidebar()"
+            onclick="toggleSidebar()"
           >
             &#10005;
           </div>
         </section>
 
-        <section
+        <div
           class="sidebar-hamburger"
           id="sidebar-hamburger"
-          onclick="onHideSidebar()"
+          onclick="toggleSidebar()"
         >
           &#9776;
-        </section>
+        </div>
 
         <ul class="main-topic-list" id="sidebar-content">
           <li class="main-topic">
             <section
               class="main-topic-title"
-              onclick="onHideFilterType('topic-container-1', 'topic-arrow-1')"
+              onclick="hideFilterType('topic-container-1', 'topic-arrow-1')"
             >
               <h3>Pengenalan Rust</h3>
               <div id="topic-arrow-1" class="filter-arrow">
@@ -102,7 +99,7 @@
                   <input type="checkbox" name="topic" id="topic-2" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title" onclick="onChangeContent(0)">
+                <div class="topic-title" onclick="changeContent(0)">
                   1. Apa itu Rust?
                 </div>
               </li>
@@ -112,7 +109,7 @@
                   <input type="checkbox" name="topic" id="topic-2" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title" onclick="onChangeContent(1)">
+                <div class="topic-title" onclick="changeContent(1)">
                   2. Instalasi Rust
                 </div>
               </li>
@@ -122,7 +119,7 @@
                   <input type="checkbox" name="topic" id="topic-3" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title" onclick="onChangeContent(2)">3. Build dan Run Program Rust</div>
+                <div class="topic-title" onclick="changeContent(2)">3. Build dan Run Program Rust</div>
               </li>
 
               <li class="topic-item" id="topic-item-4">
@@ -138,7 +135,7 @@
           <li class="main-topic">
             <section
               class="main-topic-title"
-              onclick="onHideFilterType('topic-container-2', 'topic-arrow-2')"
+              onclick="hideFilterType('topic-container-2', 'topic-arrow-2')"
             >
               <h3>Intermediate Rust</h3>
               <div id="topic-arrow-2" class="filter-arrow">
@@ -167,14 +164,14 @@
           <li class="main-topic">
             <div
               class="main-topic-title"
-              onclick="onHideFilterType('topic-container-2', 'topic-arrow-2')"
+              onclick="hideFilterType('topic-container-3', 'topic-arrow-3')"
             >
               <h3>Sepuh Rust</h3>
-              <div id="topic-arrow-2" class="filter-arrow">
+              <div id="topic-arrow-3" class="filter-arrow">
                 <img src="/images/icon/up-arrow.png" alt="arrow-up" />
               </div>
             </div>
-            <ul class="topic-container" id="topic-container-2">
+            <ul class="topic-container" id="topic-container-3">
               <li class="topic-item" id="topic-item-1">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-5" />
@@ -211,6 +208,10 @@
         </ul>
       </aside>
     </main>
+
+    <footer>
+      SINAU @ 2024
+    </footer>
 
     <script src="script.js" defer></script>
   </body>
