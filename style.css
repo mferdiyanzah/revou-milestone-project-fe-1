@@ -29,6 +29,10 @@ header {
   font-weight: bolder;
   letter-spacing: 4px;
   margin-right: 2em;
+}
+
+.header_logo > a {
+  text-decoration: none;
   color: #3f72af;
 }
 
@@ -509,6 +513,10 @@ footer {
   list-style-type: none;
 }
 
+.topic-container.hidden{
+  display: none;
+}
+
 .rating > label {
   font-size: 0.8em;
 }
@@ -517,11 +525,15 @@ footer {
   color: #ffd700;
 }
 
-.filter-arrow {
+.topic-arrow {
   transition: 0.3s;
 }
 
-.filter-arrow > img {
+.topic-arrow.rotate{
+  rotate: 180deg;
+}
+
+.topic-arrow > img {
   width: 1.5em;
   height: auto;
 }
@@ -587,6 +599,10 @@ footer {
 .topic-title{
   margin-left: 2em;
   cursor: pointer;
+}
+
+.topic-title.active{
+  font-weight: 700;
 }
 
 .sidebar-header.hidden, .main-topic-list.hidden{

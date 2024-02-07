@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -10,7 +10,9 @@
   <body>
     <header>
       <div class="main-header">
-        <div class="header_logo">SINAU</div>
+        <div class="header_logo">
+          <a href="index.html">SINAU</a>
+        </div>
         <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
       </div>
 
@@ -86,20 +88,20 @@
           <li class="main-topic">
             <section
               class="main-topic-title"
-              onclick="hideFilterType('topic-container-1', 'topic-arrow-1')"
+              onclick="hideTopic('topic-container-1', 'topic-arrow-1')"
             >
               <h3>Pengenalan Rust</h3>
-              <div id="topic-arrow-1" class="filter-arrow">
+              <div id="topic-arrow-1" class="topic-arrow">
                 <img src="/images/icon/up-arrow.png" alt="arrow-up" />
               </div>
             </section>
             <ul class="topic-container" id="topic-container-1">
               <li class="topic-item" id="topic-item-1">
                 <label class="topic-checkbox">
-                  <input type="checkbox" name="topic" id="topic-2" />
+                  <input type="checkbox" name="topic" id="topic-1" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title" onclick="changeContent(0)">
+                <div class="topic-title active" id="topic-title-1" onclick="changeContent(0)">
                   1. Apa itu Rust?
                 </div>
               </li>
@@ -109,7 +111,7 @@
                   <input type="checkbox" name="topic" id="topic-2" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title" onclick="changeContent(1)">
+                <div class="topic-title" id="topic-title-2" onclick="changeContent(1)">
                   2. Instalasi Rust
                 </div>
               </li>
@@ -119,7 +121,7 @@
                   <input type="checkbox" name="topic" id="topic-3" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title" onclick="changeContent(2)">3. Build dan Run Program Rust</div>
+                <div class="topic-title" id="topic-title-3" onclick="changeContent(2)">3. Build dan Run Program Rust</div>
               </li>
 
               <li class="topic-item" id="topic-item-4">
@@ -135,14 +137,14 @@
           <li class="main-topic">
             <section
               class="main-topic-title"
-              onclick="hideFilterType('topic-container-2', 'topic-arrow-2')"
+              onclick="hideTopic('topic-container-2', 'topic-arrow-2')"
             >
               <h3>Intermediate Rust</h3>
-              <div id="topic-arrow-2" class="filter-arrow">
+              <div id="topic-arrow-2" class="topic-arrow rotate">
                 <img src="/images/icon/up-arrow.png" alt="arrow-up" />
               </div>
             </section>
-            <ul class="topic-container" id="topic-container-2">
+            <ul class="topic-container hidden" id="topic-container-2">
               <li class="topic-item" id="topic-item-1">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-5" />
@@ -162,16 +164,16 @@
           </li>
 
           <li class="main-topic">
-            <div
+            <section
               class="main-topic-title"
-              onclick="hideFilterType('topic-container-3', 'topic-arrow-3')"
+              onclick="hideTopic('topic-container-3', 'topic-arrow-3')"
             >
               <h3>Sepuh Rust</h3>
-              <div id="topic-arrow-3" class="filter-arrow">
+              <div id="topic-arrow-3" class="topic-arrow rotate">
                 <img src="/images/icon/up-arrow.png" alt="arrow-up" />
               </div>
-            </div>
-            <ul class="topic-container" id="topic-container-3">
+            </section>
+            <ul class="topic-container hidden" id="topic-container-3">
               <li class="topic-item" id="topic-item-1">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-5" />

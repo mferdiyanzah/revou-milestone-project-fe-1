@@ -3,7 +3,8 @@ const navbarToggle = document.getElementById("navbar-toggle");
 const navbar = document.getElementById("navbar");
 
 const toggleNavbar = () => {
-  const isNavbarVisible = navbar.style.display === "none" || navbar.style.display === "";
+  const isNavbarVisible =
+    navbar.style.display === "none" || navbar.style.display === "";
 
   navbar.style.display = isNavbarVisible ? "flex" : "none";
   navbarToggle.innerHTML = isNavbarVisible ? "&#10005;" : "&#9776;";
@@ -11,24 +12,15 @@ const toggleNavbar = () => {
 
 navbarToggle.addEventListener("click", toggleNavbar);
 
-// Filter Tab
-const filterTab = document.getElementById("filter-tab");
-const programList = document.getElementById("program-list");
-
-const hideFilterTab = () => {
-  filterTab.style.width = filterTab.style.width === "0px" ? "30%" : "0px";
-  programList.style.width = filterTab.style.width === "0px" ? "70%" : "100%";
-};
-
-const hideFilterType = (filterType, idArrow) => {
-  const filterTypeElement = document.getElementById(filterType);
-  const isHidden = filterTypeElement.style.display === "none";
-
-  filterTypeElement.style.display = isHidden ? "flex" : "none";
-  document.getElementById(idArrow).style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
-};
-
 // Sidebar
+const hideTopic = (containerId, idArrow) => {
+  const filterTypeElement = document.getElementById(containerId);
+  filterTypeElement.classList.toggle("hidden");
+
+  const arrowId = document.getElementById(idArrow);
+  arrowId.classList.toggle("rotate");
+};
+
 const sidebar = document.getElementById("sidebar-hamburger");
 const sidebarHeader = document.getElementById("sidebar-header");
 const sidebarContent = document.getElementById("sidebar-content");
@@ -59,59 +51,47 @@ const resizeOnWindow = () => {
 window.addEventListener("resize", resizeOnWindow);
 
 // Content Type
-const contentType = ['video-content', 'pdf-content', 'article-content'];
+let currentContentType = 0;
+
+const contentType = [
+  {
+    id: "video-content",
+    type: "video",
+    done: false,
+  },
+  {
+    id: "article-content",
+    type: "article",
+    done: false,
+  },
+  {
+    id: "pdf-content",
+    type: "pdf",
+    done: false,
+  },
+]
 
 const changeContent = (type) => {
-  contentType.forEach((content, index) => {
-    const contentElement = document.getElementById(content);
-    contentElement.style.display = index === type ? 'block' : 'none';
+  const currentCheckbox = document.getElementById(`topic-${currentContentType + 1}`);
+  currentCheckbox.checked = true;
 
-    if (content === 'video-content') {
-      const videoElement = document.getElementById('video-content');
+  const currentTopicTitle = document.getElementById(`topic-title-${currentContentType + 1}`);
+  currentTopicTitle.classList.remove("active");
+
+  const nextTopicTitle = document.getElementById(`topic-title-${type + 1}`);
+  nextTopicTitle.classList.add("active");
+  currentContentType = type;
+
+  contentType.forEach((content, index) => {
+    const contentElement = document.getElementById(content.id);
+    contentElement.style.display = index === type ? "block" : "none";
+
+    if (content === "video-content") {
+      const videoElement = document.getElementById("video-content");
       videoElement.pause();
     }
   });
 };
 
-// Login Form
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const loginBtn = document.getElementById("login-btn");
-const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-const checkLoginForm = () => {
-  const email = emailInput.value;
-  const password = passwordInput.value;
-  const isValidEmail = emailRegex.test(email);
-
-  if (email === "" || password === "" || !isValidEmail) {
-    disableLoginButton();
-  } else {
-    enableLoginButton();
-  }
-};
-
-const disableLoginButton = () => {
-  loginBtn.style.backgroundColor = "#d3d3d3";
-  loginBtn.style.cursor = "not-allowed";
-  loginBtn.disabled = true;
-};
-
-const enableLoginButton = () => {
-  loginBtn.style.backgroundColor = "#3f72af";
-  loginBtn.style.cursor = "pointer";
-  loginBtn.disabled = false;
-};
-
-const onSubmitLoginForm = (e) => {
-  e.preventDefault();
-  alert("Welcome, you are logged in! HIHIHI");
-};
-
-const formElement = document.getElementById("login-form");
-formElement.addEventListener("submit", onSubmitLoginForm);
-
 // Initial setup
 toggleNavbar();
-resizeNavbarOnWindow();
-checkLoginForm();
