@@ -13,22 +13,30 @@
         <h1>Masuk ke SINAU</h1>
         <p>Belum punya akun? <a href="#">Daftar Sekarang</a></p>
         <form action="" id="login-form">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            oninput="checkLoginForm()"
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Kata Sandi"
-            required
-            oninput="checkLoginForm()"
-          />
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              oninput="checkLoginForm()"
+              required
+            />
+            <p id="email-error" class="error-message">&nbsp;</p>
+          </div>
+
+          <div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Kata Sandi"
+              required
+              oninput="checkLoginForm()"
+            />
+            <p id="password-error" class="error-message">&nbsp;</p>
+          </div>
+
           <button type="submit" id="login-btn">Masuk</button>
         </form>
 

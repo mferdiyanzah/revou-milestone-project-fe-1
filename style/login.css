@@ -31,18 +31,30 @@
   text-align: center;
 }
 
-.login > form {
+form {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
 .login input {
-  padding: 0.5em 1em;
+  padding: 0.5em;
   border: 1px solid #3f72af;
   border-radius: 3px;
   outline: none;
   font-size: 1.2em;
+  width: 100%;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.75em;
+  margin-top: 0.2em;
+  padding: 0;
+}
+
+input.error {
+  border: 1px solid red;
 }
 
 .login button {

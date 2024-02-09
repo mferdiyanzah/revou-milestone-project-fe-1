@@ -28,6 +28,37 @@ const checkLoginForm = () => {
   }
 };
 
+const onEmailInput = () => {
+  const emailErrorIdElement = document.getElementById("email-error");
+  const email = emailInput.value;
+
+  if (email === "") {
+    emailInput.classList.add("error");
+    emailErrorIdElement.textContent = "Email tidak boleh kosong";
+  } else if (!emailRegex.test(email)) {
+    emailInput.classList.add("error");
+    emailErrorIdElement.textContent = "Email tidak valid";
+  } else {
+    emailInput.classList.remove("error");
+    emailErrorIdElement.innerHTML = "&nbsp;";
+  }
+};
+emailInput.addEventListener("input", onEmailInput);
+
+const onPasswordInput = () => {
+  const passwordErrorIdElement = document.getElementById("password-error");
+  const password = passwordInput.value;
+
+  if (password === "") {
+    passwordInput.classList.add("error");
+    passwordErrorIdElement.textContent = "Kata sandi tidak boleh kosong";
+  } else {
+    passwordInput.classList.remove("error");
+    passwordErrorIdElement.innerHTML = "&nbsp;";
+  }
+};
+passwordInput.addEventListener("input", onPasswordInput);
+
 const onSubmitLoginForm = (e) => {
   e.preventDefault();
   alert("Welcome, you are logged in! HIHIHI");
