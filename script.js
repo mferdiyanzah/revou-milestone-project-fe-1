@@ -69,13 +69,17 @@ const contentType = [
     type: "pdf",
     done: false,
   },
-]
+];
 
 const changeContent = (type) => {
-  const currentCheckbox = document.getElementById(`topic-${currentContentType + 1}`);
+  const currentCheckbox = document.getElementById(
+    `topic-${currentContentType + 1}`
+  );
   currentCheckbox.checked = true;
 
-  const currentTopicTitle = document.getElementById(`topic-title-${currentContentType + 1}`);
+  const currentTopicTitle = document.getElementById(
+    `topic-title-${currentContentType + 1}`
+  );
   currentTopicTitle.classList.remove("active");
 
   const nextTopicTitle = document.getElementById(`topic-title-${type + 1}`);
@@ -92,6 +96,3 @@ const changeContent = (type) => {
     }
   });
 };
-
-// Initial setup
-toggleNavbar();
