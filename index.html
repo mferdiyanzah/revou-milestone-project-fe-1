@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME | SINAU</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/general.css" />
+    <link rel="stylesheet" href="style/index.css" />
   </head>
   <body>
     <header>
       <div class="main-header">
-        <div class="header_logo">
+        <h2 class="header_logo">
           <a href="index.html">SINAU</a>
-        </div>
+        </h2>
         <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
       </div>
 
-      <nav id="navbar" class="navbar">
+      <div id="navbar" class="navbar">
         <ul>
           <li class="header_explore">Eksplor</li>
           <li>
@@ -33,19 +34,19 @@
           <li><a href="login.html">Masuk</a></li>
           <li class="register">Daftar Gratis</li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main class="homepage">
       <section class="hero">
         <div class="hero_content">
           <h1>Belajar dengan SINAU</h1>
-          <article>
+          <p>
             SINAU adalah platform belajar online yang menyediakan berbagai macam
             kursus yang dapat membantu anda dalam belajar. Kami menawarkan
             kursus-kursus berkualitas dari berbagai bidang, seperti pemrograman,
             desain grafis, bisnis, dan masih banyak lagi.
-          </article>
+          </p>
           <button class="hero_cta">Daftar Sekarang</button>
         </div>
         <img src="images/hero-image.webp" alt="hero" />
@@ -67,8 +68,8 @@
 
       <section class="explore_programs">
         <h2>Program unggulan</h2>
-        <ul class="explore_programs-content">
-          <li class="explore_programs-card">
+        <div class="explore_programs-content">
+          <article class="explore_programs-card">
             <img src="images/icon/icon-rust.png" alt="programming" />
             <h3>Rust</h3>
             <p>
@@ -78,8 +79,8 @@
             <a class="explore_programs-cta" href="learning.html"
               >Lihat Kursus</a
             >
-          </li>
-          <li class="explore_programs-card">
+          </article>
+          <article class="explore_programs-card">
             <img src="images/icon/icon-wasm.png" alt="design" />
             <h3>Web Assembly</h3>
             <p>
@@ -89,8 +90,8 @@
             <a class="explore_programs-cta" href="learning.html"
               >Lihat Kursus</a
             >
-          </li>
-          <li class="explore_programs-card">
+          </article>
+          <article class="explore_programs-card">
             <img src="images/icon/icon-web3.png" alt="business" />
             <h3>Web 3.0</h3>
             <p>
@@ -100,57 +101,57 @@
             <a class="explore_programs-cta" href="learning.html"
               >Lihat Kursus</a
             >
-          </li>
-        </ul>
+          </article>
+        </div>
       </section>
 
       <section class="testimoni">
         <h2>Kata Alumni terkait SINAU</h2>
-        <ul class="testimoni-content">
-          <li class="testimoni-card">
+        <div class="testimoni-content">
+          <article class="testimoni-card">
             <img src="images/icon/icon-people.png" alt="testimoni-1" />
             <h3>John Doe - Blockhain Developer at Microhard</h3>
-            <article>
+            <p>
               "Dengan SINAU, saya dapat belajar banyak hal baru yang tidak saya
               dapatkan di kampus saya. Saya sangat merekomendasikan SINAU untuk
               teman-teman saya. Di SINAU, saya dapat belajar dengan cara yang
               lebih menyenangkan dan lebih efektif."
-            </article>
-          </li>
-          <li class="testimoni-card">
+            </p>
+          </article>
+          <article class="testimoni-card">
             <img src="images/icon/icon-people.png" alt="testimoni-2" />
             <h3>Jane Doe - UI/UX Designer di Petronas</h3>
-            <article>
+            <p>
               "SINAU membantu saya dalam memperdalam pengetahuan saya dalam
               desain grafis. Saya sangat merekomendasikan SINAU untuk
               teman-teman saya. Di SINAU, saya dapat belajar dengan cara yang
               lebih menyenangkan dan lebih efektif."
-            </article>
-          </li>
-          <li class="testimoni-card">
+            </p>
+          </article>
+          <article class="testimoni-card">
             <img src="images/icon/icon-people.png" alt="testimoni-3" />
             <h3>John Smith - BI Analyst di Tesla</h3>
-            <article>
+            <p>
               "SINAU membantu saya dalam memperdalam pengetahuan saya dalam
               bisnis. Saya sangat merekomendasikan SINAU untuk teman-teman saya.
               Di SINAU, saya dapat belajar dengan cara yang lebih menyenangkan
               dan lebih efektif."
-            </article>
-          </li>
-        </ul>
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="news">
         <h2>Berita Terbaru</h2>
-        <ul class="news-content">
-          <li class="news-card">
+        <div class="news-content">
+          <article class="news-card">
             <img src="images/news-1.webp" alt="news-1" />
             <div>
               <h3>Apakah Rust sangat sepadan?</h3>
               <span class="news-date">12 Agustus 2021</span>
             </div>
 
-            <article>
+            <p>
               Rust merupakan bahasa pemrograman yang fokus pada keamanan dan
               kecepatan. Namun, apakah Rust sangat sepadan untuk dipelajari?
               Rust pada dasarnya adalah bahasa pemrograman yang sangat kuat dan
@@ -158,17 +159,17 @@
               sangat cocok untuk pengembangan sistem operasi, game, dan aplikasi
               web. Rust juga sangat cocok untuk pengembangan sistem operasi,
               game, dan aplikasi web.
-            </article>
-          </li>
+            </p>
+          </article>
 
-          <li class="news-card">
+          <article class="news-card">
             <img src="images/news-1.webp" alt="news-1" />
             <div>
               <h3>Apakah Rust sangat sepadan?</h3>
               <span class="news-date">12 Agustus 2021</span>
             </div>
 
-            <article>
+            <p>
               Rust merupakan bahasa pemrograman yang fokus pada keamanan dan
               kecepatan. Namun, apakah Rust sangat sepadan untuk dipelajari?
               Rust pada dasarnya adalah bahasa pemrograman yang sangat kuat dan
@@ -176,17 +177,17 @@
               sangat cocok untuk pengembangan sistem operasi, game, dan aplikasi
               web. Rust juga sangat cocok untuk pengembangan sistem operasi,
               game, dan aplikasi web.
-            </article>
-          </li>
+            </p>
+          </article>
 
-          <li class="news-card">
+          <article class="news-card">
             <img src="images/news-1.webp" alt="news-1" />
             <div>
               <h3>Apakah Rust sangat sepadan?</h3>
               <span class="news-date">12 Agustus 2021</span>
             </div>
 
-            <article>
+            <p>
               Rust merupakan bahasa pemrograman yang fokus pada keamanan dan
               kecepatan. Namun, apakah Rust sangat sepadan untuk dipelajari?
               Rust pada dasarnya adalah bahasa pemrograman yang sangat kuat dan
@@ -194,17 +195,17 @@
               sangat cocok untuk pengembangan sistem operasi, game, dan aplikasi
               web. Rust juga sangat cocok untuk pengembangan sistem operasi,
               game, dan aplikasi web.
-            </article>
-          </li>
+            </p>
+          </article>
 
-          <li class="news-card">
+          <article class="news-card">
             <img src="images/news-1.webp" alt="news-1" />
             <div>
               <h3>Apakah Rust sangat sepadan?</h3>
               <span class="news-date">12 Agustus 2021</span>
             </div>
 
-            <article>
+            <p>
               Rust merupakan bahasa pemrograman yang fokus pada keamanan dan
               kecepatan. Namun, apakah Rust sangat sepadan untuk dipelajari?
               Rust pada dasarnya adalah bahasa pemrograman yang sangat kuat dan
@@ -212,9 +213,9 @@
               sangat cocok untuk pengembangan sistem operasi, game, dan aplikasi
               web. Rust juga sangat cocok untuk pengembangan sistem operasi,
               game, dan aplikasi web.
-            </article>
-          </li>
-        </ul>
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="next-journey">
@@ -228,6 +229,6 @@
 
     <footer>SINAU @ 2024</footer>
 
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
   </body>
 </html>

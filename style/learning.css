@@ -1,0 +1,288 @@
+/* ==================== MAIN ==================== */
+.top-filter {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  gap: 1em;
+}
+
+.top-filter > * {
+  flex-grow: 1;
+}
+
+.filter-button {
+  background-color: #3f72af;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  border: none;
+  font-size: 1em;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #1a5276;
+  transition: 0.3s;
+}
+
+.top-filter > .sort {
+  display: flex;
+  flex-direction: column;
+}
+
+.sort > select {
+  padding: 0.5em 1em;
+  border: 1px solid #3f72af;
+  background-color: #f9f7f7;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1em;
+}
+
+.sort > label {
+  font-size: 0.8em;
+}
+
+.program-content {
+  display: flex;
+  gap: 2em;
+  width: 100%;
+}
+
+.program-content > aside {
+  width: 30%;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.main-topic {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.main-topic-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.topic-container {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  padding-left: 1em;
+  list-style-type: none;
+}
+
+.topic-container.hidden {
+  display: none;
+}
+
+.rating > label {
+  font-size: 0.8em;
+}
+
+.star-fill {
+  color: #ffd700;
+}
+
+.topic-arrow {
+  transition: 0.3s;
+}
+
+.topic-arrow.rotate {
+  rotate: 180deg;
+}
+
+.topic-arrow > img {
+  width: 1.5em;
+  height: auto;
+}
+
+.topic-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2.5em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topic-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #eee;
+}
+
+.topic-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.topic-checkbox input:checked ~ .checkmark {
+  background-color: #3f72af;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.topic-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.topic-checkbox .checkmark:after {
+  top: 0.1em;
+  left: 0.45em;
+  width: 0.4em;
+  height: 0.8em;
+  border: solid white;
+  border-width: 0 0.2em 0.2em 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.topic-title {
+  font-weight: normal;
+  margin-left: 2em;
+  cursor: pointer;
+}
+
+.topic-title.active {
+  font-weight: 700;
+}
+
+.sidebar-header.hidden,
+.main-topic-list.hidden {
+  display: none;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px double #3f72af;
+  padding-bottom: 1em;
+}
+
+.sidebar-header > .close-sidebar {
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sidebar-hamburger {
+  font-size: 1.6em;
+  font-weight: 900;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar-hamburger.active {
+  display: block;
+}
+
+main.learning-container {
+  width: 100%;
+  display: flex;
+  margin-top: 5em;
+  min-height: 90vh;
+  margin-bottom: 1em;
+}
+
+.learning-content-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.learning-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.learning-content > * {
+  margin: 0 auto;
+}
+
+.learning-sidebar {
+  border-left: 1px solid #e0e0e0;
+  width: 25%;
+  padding: 1em;
+  background-color: #f9f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.learning-content-container.larger {
+  width: 97%;
+}
+
+.learning-sidebar.hidden {
+  width: 3%;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+embed {
+  width: 100%;
+  min-height: 60vh;
+}
+
+.pdf-content,
+.article-content {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  main.learning-container {
+    flex-direction: column;
+  }
+
+  .learning-content-container,
+  .learning-sidebar {
+    width: 100%;
+  }
+
+  .close-sidebar {
+    display: none;
+  }
+
+  iframe,
+  embed {
+    width: 100%;
+    height: 80vh;
+  }
+}

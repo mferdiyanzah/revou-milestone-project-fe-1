@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rust Untuk ANAK PAUD | SINAU</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/general.css" />
+    <link rel="stylesheet" href="style/learning.css" />
   </head>
   <body>
     <header>
       <div class="main-header">
-        <div class="header_logo">
+        <h2 class="header_logo">
           <a href="index.html">SINAU</a>
-        </div>
+        </h2>
         <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
       </div>
 
-      <nav id="navbar" class="navbar">
+      <div id="navbar" class="navbar">
         <ul>
           <li class="header_explore">Eksplor</li>
           <li>
@@ -34,7 +35,7 @@
           <li><a href="login.html">Masuk</a></li>
           <li class="register">Daftar Gratis</li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main class="learning-container">
@@ -64,7 +65,7 @@
         ></iframe>
       </div>
 
-      <aside class="learning-sidebar" id="learning-sidebar">
+      <div class="learning-sidebar" id="learning-sidebar">
         <section class="sidebar-header" id="sidebar-header">
           <h2>Daftar Materi</h2>
           <div
@@ -84,9 +85,9 @@
           &#9776;
         </div>
 
-        <ul class="main-topic-list" id="sidebar-content">
-          <li class="main-topic">
-            <section
+        <div class="main-topic-list" id="sidebar-content">
+          <section class="main-topic">
+            <div
               class="main-topic-title"
               onclick="hideTopic('topic-container-1', 'topic-arrow-1')"
             >
@@ -94,62 +95,62 @@
               <div id="topic-arrow-1" class="topic-arrow">
                 <img src="/images/icon/up-arrow.png" alt="arrow-up" />
               </div>
-            </section>
-            <ul class="topic-container" id="topic-container-1">
-              <li class="topic-item" id="topic-item-1">
+            </div>
+            <div class="topic-container" id="topic-container-1">
+              <article class="topic-item" id="topic-item-1">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-1" />
                   <span class="checkmark"></span>
                 </label>
-                <div
+                <h4
                   class="topic-title active"
                   id="topic-title-1"
                   onclick="changeContent(0)"
                 >
                   1. Apa itu Rust?
-                </div>
-              </li>
+                </h4>
+              </article>
 
-              <li class="topic-item" id="topic-item-2">
+              <article class="topic-item" id="topic-item-2">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-2" />
                   <span class="checkmark"></span>
                 </label>
-                <div
+                <h4
                   class="topic-title"
                   id="topic-title-2"
                   onclick="changeContent(1)"
                 >
                   2. Instalasi Rust
-                </div>
-              </li>
+                </h4>
+              </article>
 
-              <li class="topic-item" id="topic-item-3">
+              <article class="topic-item" id="topic-item-3">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-3" />
                   <span class="checkmark"></span>
                 </label>
-                <div
+                <h4
                   class="topic-title"
                   id="topic-title-3"
                   onclick="changeContent(2)"
                 >
                   3. Build dan Run Program Rust
-                </div>
-              </li>
+                </h4>
+              </article>
 
-              <li class="topic-item" id="topic-item-4">
+              <article class="topic-item" id="topic-item-4">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-4" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title">4. Tipe Data</div>
-              </li>
-            </ul>
-          </li>
+                <h4 class="topic-title">4. Tipe Data</h4>
+              </article>
+            </div>
+          </section>
 
-          <li class="main-topic">
-            <section
+          <section class="main-topic">
+            <div
               class="main-topic-title"
               onclick="hideTopic('topic-container-2', 'topic-arrow-2')"
             >
@@ -157,28 +158,28 @@
               <div id="topic-arrow-2" class="topic-arrow rotate">
                 <img src="/images/icon/up-arrow.png" alt="arrow-up" />
               </div>
-            </section>
-            <ul class="topic-container hidden" id="topic-container-2">
-              <li class="topic-item" id="topic-item-1">
+            </div>
+            <div class="topic-container hidden" id="topic-container-2">
+              <article class="topic-item" id="topic-item-1">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-5" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title">5. Social Media Bot</div>
-              </li>
+                <h4 class="topic-title">5. Social Media Bot</h4>
+              </article>
 
-              <li class="topic-item" id="topic-item-2">
+              <article class="topic-item" id="topic-item-2">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-6" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title">6. Audio Player</div>
-              </li>
-            </ul>
-          </li>
+                <h4 class="topic-title">6. Audio Player</h4>
+              </article>
+            </div>
+          </section>
 
-          <li class="main-topic">
-            <section
+          <section class="main-topic">
+            <div
               class="main-topic-title"
               onclick="hideTopic('topic-container-3', 'topic-arrow-3')"
             >
@@ -186,47 +187,47 @@
               <div id="topic-arrow-3" class="topic-arrow rotate">
                 <img src="/images/icon/up-arrow.png" alt="arrow-up" />
               </div>
-            </section>
-            <ul class="topic-container hidden" id="topic-container-3">
-              <li class="topic-item" id="topic-item-1">
+            </div>
+            <div class="topic-container hidden" id="topic-container-3">
+              <article class="topic-item" id="topic-item-1">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-5" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title">7. CPU Emulator</div>
-              </li>
+                <h4 class="topic-title">7. CPU Emulator</h4>
+              </article>
 
-              <li class="topic-item" id="topic-item-2">
+              <article class="topic-item" id="topic-item-2">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-6" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title">8. OS Kernel</div>
-              </li>
+                <h4 class="topic-title">8. OS Kernel</h4>
+              </article>
 
-              <li class="topic-item" id="topic-item-3">
+              <article class="topic-item" id="topic-item-3">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-7" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title">9. Embedded Programming</div>
-              </li>
+                <h4 class="topic-title">9. Embedded Programming</h4>
+              </article>
 
-              <li class="topic-item" id="topic-item-4">
+              <article class="topic-item" id="topic-item-4">
                 <label class="topic-checkbox">
                   <input type="checkbox" name="topic" id="topic-8" />
                   <span class="checkmark"></span>
                 </label>
-                <div class="topic-title">10. Game Engine</div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
+                <h4 class="topic-title">10. Game Engine</h4>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <footer>SINAU @ 2024</footer>
 
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
   </body>
 </html>
