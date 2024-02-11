@@ -1,18 +1,15 @@
-// Login Form
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const loginBtn = document.getElementById("login-btn");
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
 const disableLoginButton = () => {
-  loginBtn.style.backgroundColor = "#d3d3d3";
-  loginBtn.style.cursor = "not-allowed";
+  loginBtn.classList.add("disabled");
   loginBtn.disabled = true;
 };
 
 const enableLoginButton = () => {
-  loginBtn.style.backgroundColor = "#3f72af";
-  loginBtn.style.cursor = "pointer";
+  loginBtn.classList.remove("disabled");
   loginBtn.disabled = false;
 };
 

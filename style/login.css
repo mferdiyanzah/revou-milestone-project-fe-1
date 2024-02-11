@@ -68,6 +68,11 @@ input.error {
   margin-bottom: 1em;
 }
 
+button.disabled {
+  background-color: #c4c4c4;
+  cursor: not-allowed;
+}
+
 .social-media {
   display: flex;
   justify-content: center;

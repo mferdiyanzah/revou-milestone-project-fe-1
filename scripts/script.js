@@ -1,4 +1,3 @@
-// Navbar
 const navbarToggle = document.getElementById("navbar-toggle");
 const navbar = document.getElementById("navbar");
 
@@ -12,7 +11,6 @@ const toggleNavbar = () => {
 
 navbarToggle.addEventListener("click", toggleNavbar);
 
-// Sidebar
 const hideTopic = (containerId, idArrow) => {
   const filterTypeElement = document.getElementById(containerId);
   filterTypeElement.classList.toggle("hidden");
@@ -37,9 +35,11 @@ const toggleSidebar = () => {
 
 const resizeOnWindow = () => {
   const windowWidth = window.innerWidth;
-  navbar.style.display = windowWidth > 980 ? "flex" : "none";
+  const TabletWidth = 768;
+  navbar.style.display = windowWidth > TabletWidth ? "flex" : "none";
 
-  if (windowWidth < 1200) {
+  const MediumWidth = 1200;
+  if (windowWidth < MediumWidth) {
     sidebar.classList.remove("active");
     sidebarHeader.classList.remove("hidden");
     sidebarContent.classList.remove("hidden");
@@ -50,7 +50,6 @@ const resizeOnWindow = () => {
 
 window.addEventListener("resize", resizeOnWindow);
 
-// Content Type
 let currentContentType = 0;
 
 const contentType = [
@@ -90,7 +89,7 @@ const changeContent = (type) => {
     const contentElement = document.getElementById(content.id);
     contentElement.style.display = index === type ? "block" : "none";
 
-    if (content === "video-content") {
+    if (content == "video-content") {
       const videoElement = document.getElementById("video-content");
       videoElement.pause();
     }
