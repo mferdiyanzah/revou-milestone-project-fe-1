@@ -86,6 +86,6 @@ We used a clean and minimalist layout for the app, with plenty of white space an
 
 ![alt text](/images/ss/ss-mobile-2.png)
 
-
 ### Demonstration Video
-[Here](https://drive.google.com/file/d/1UP810BJ71NC9QfX84AMX_zyxVnMzD4Ga/view?usp=sharing)
+
+[Here](https://drive.google.com/file/d/1FywFQo2MLWgtZNJJG10pasQM1h9RU-wo/view?usp=sharing)
